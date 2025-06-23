@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let palabra = 'JavaScript';
+        document.write('la palabra es: '+palabra);
+        document.write('<br>');
+        
+        // ver tamaño de un texto
+        document.write('cantidad de letras: '+palabra.length);
+        document.write('<br>');
+
+        // ver cantidad especifica de letras o caracteres
+        document.write('primeras cuatros letras de la variable ',palabra.slice(0,4));
+        document.write('<br>');
+
+        // ver cantidad especifica de ltras o caracteres otera funcion
+        document.write('primeras cuatro letras de la variable ',palabra.substring(0,5));
+        document.write('<br>');
+
+        // cambuiar valores en un texto
+        let saludo = 'Hola a todos';
+
+        saludo = saludo.replace("Hola", "Buenos dias");
+        document.write(saludo);
+        document.write('<br>');
+
+
+        // poner en mayyuscula
+        document.write('en mayusculas: ',palabra.toUpperCase());
+        document.write('<br>');
+
+        // poner en minuscula
+        document.write('en minusculas: ',palabra.toLowerCase());
+        document.write('<br>');
+
+        // unir texto 
+        let palabra2 = 'Curso de: ';
+        document.write('unir palabras: ',palabra2.concat(palabra));
+        document.write('<br>');
+
+
+        // acortar espacios entre textos
+        let palabra3 = '    Hola      ';
+        document.write(palabra3);
+        document.write('<br>');
+        document.write(palabra3.trimStart()); // del lado izquierdo
+        document.write('<br>');
+        document.write(palabra3.trimEnd()); // del lado derecho
+        document.write('<br>');
+        document.write(palabra3.trim());// quita ambos espacios
+
+
+        // cortar cantidad de caracteres en una palabra
+        document.write(palabra.split('Script')); // corta de mi variable ´palabra el texto que te coloco aqui
+
+
+
+    </script>
+</body>
+</html>

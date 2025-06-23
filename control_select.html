@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Colores de semaforo</h4>
+    <form action="" method="post">
+        <p><select name="select1" id="select1" onchange="cambiarColor()">
+            <option value="puede continuar">Verde</option>
+            <option value="precaucion para detenerse">Amarillo</option>
+            <option value="debe detenerse">Rojo</option>
+        </select></p>
+        <p>Indice seleccionado: <input type="text" id="text1" name="text1"></p>
+        <p>Color seleccionado: <input type="text" id="text2" name="text2"></p>
+        <p>Indicacion: <input type="text" id="text3" name="text3"></p>
+    </form>
+    <script>
+        function cambiarColor(){
+            let seleccion = document.getElementById('select1');
+            /*
+            *Al obtener el valor del elemento id text1 se le pasa a la casilla la seleccion de
+            *selectedIndex esta busca el valor de indice de las opcines creadas en el select
+            */
+document.getElementById('text1').value = seleccion.selectedIndex;
+            /*
+            *al obtener el valor del elemento id text2 se le pasa el texto de acuerd
+            *  al indece obtenido con anterioridad, seleccionando el indice del texto
+            */
+document.getElementById('text2').value = seleccion.options[seleccion.selectedIndex].text;
+            /*
+            *realiza lo mismo que el anterior pero en vez de seleccionar el texto
+            * seleccionar el valor del option correspondiente utilizando el indice correspondiente
+            */
+document.getElementById('text3').value = seleccion.options[seleccion.selectedIndex].value;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Acceso de usuarios</h4>
+    <form action="" method="post">
+        Ingrese usuario: <br>
+        <input type="text" name="user" id="user" required>
+        <br><br>
+        Ingrese clave: <br>
+        <input type="password" name="password" id="password" required>
+        <br><br>
+        <button type="button" onclick="verfificar()">confirmar</button>
+    </form>
+    <script>
+        let control = 0;
+        let contrasenia = 'acceso01';
+        function verfificar(){
+            //queremos captar un dato quese esta ingresando en un elemento
+            // pro su id (clave)
+            let password = document.getElementById('password').value;
+            if (password != contrasenia || password == "") {
+                alert('Calve incorrecta o vacia intente de nuevo');
+                //controlar la cantidad de intentos
+                control++;
+                if (control >= 3) {
+                    alert('Inentos agotados acceso bloqueado\
+                                contactar a soporte tecnico');
+                }
+            } else {
+                //abrir nueva pagina
+                window.open("http://www.google.com");
+            }
+        }
+    </script>
+</body>
+</html>
