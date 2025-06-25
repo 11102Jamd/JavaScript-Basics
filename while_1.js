@@ -35,14 +35,14 @@ document.write('Fin del bucle ');*/
 // document.write('La suma es: '+suma);
 
 
-// let suma = 0;
-// while (true) {
-//     x = parseFloat(prompt("Ingresa un numero "));
-//     document.write(x);
-//     suma += x
-//     document.write('<br>');
-//     if (x == 0) {
-//         break;
-//     }
-// }
-// document.write(suma);
+let suma = 0;
+while (true) {
+    x = parseFloat(prompt("Ingresa un numero "));
+    document.write(x);
+    suma += x
+    document.write('<br>');
+    if (x == 0) {
+        break;
+    }
+}
+document.write(suma);

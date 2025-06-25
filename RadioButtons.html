@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h4>Selccione disponibilidad de Horario</h4>
+    <form action="" method="post">
+        <input type="radio" id="radio1" name="Horario">Mañana<br>
+        <input type="radio" id="radio2" name="Horario">Tarde<br>
+        <input type="radio" id="radio3" name="Horario">Noche<br>
+        <br><br>
+        <button type="button" name="confirm" onclick="seleccion()">Confirmar</button>
+    </form>
+    <script>
+        function seleccion(){
+            if (document.getElementById('radio1').checked) {
+                Swal.fire('Tu horario seleccionado es en la mañana\
+                        8 AM - 12 PM');
+            } 
+            if (document.getElementById('radio2').checked) {
+                Swal.fire('Tu horario seleccionado es en la tarde\
+                        12 PM - 6 PM');
+            }
+            if (document.getElementById('radio3').checked) {
+                Swal.fire('Tu horario es en la noche\
+                        6 PM - 8 AM');
+            } 
+        }
+    </script>
+</body>
+</html>
